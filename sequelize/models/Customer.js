@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Customer = sequelize.define('Customer', {
+const Customer = sequelize.define('customers', {
   customerNumber: {
     type: DataTypes.INTEGER,
     primaryKey: true
@@ -48,7 +48,9 @@ const Customer = sequelize.define('Customer', {
   },
   creditLimit: {
     type: DataTypes.DECIMAL(10, 2)
-  }
+}
+}, {
+  timestamps: false // Disable Sequelize timestamps
 });
 
 module.exports = Customer;
