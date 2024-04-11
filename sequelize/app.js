@@ -2,7 +2,7 @@ const express = require('express');
 // const bodyParser = require('body-parser');
 const db = require('./config/database'); // Import Sequelize instance
 const brandRoutes = require('./routes/brandRoutes'); // Import brand routes
-
+const customerRoutes = require('./routes/customerRoutes'); // Import customer routes
 const app = express();
 
 // Middleware
@@ -11,6 +11,8 @@ app.use(express.json());
 
 // Routes
 app.use('/brands', brandRoutes); // Use brand routes
+app.use('/customers', customerRoutes); // Use brand routes
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {
