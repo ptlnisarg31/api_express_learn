@@ -1,0 +1,21 @@
+# Dependency directories
+mysql/node_modules
+sequelize/node_modules
+sequalize/config/.env
+# Environment variables file
+db.env
+.env
+# IDE files
+.vscode
+.idea
+
+# Logs
+/logs
+
+# Generated files
+.DS_Store
+npm-debug.log
+yarn-error.log
+
+# OS generated files
+Thumbs.db
